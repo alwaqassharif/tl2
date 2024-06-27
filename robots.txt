@@ -3,3 +3,5 @@ User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
 Sitemap: https://topleads.site/
+Sitemap: https://alwaqassharif.github.io/tl2/sitemap.xml
+
