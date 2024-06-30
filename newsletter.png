@@ -182,7 +182,7 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.webp">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="img/about.webp" alt="leads sale">
                     </div>
                 </div>
             </div>
@@ -203,7 +203,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-center mb-n5 d-none d-md-block">
-                        <img class="img-fluid mt-5" style="height: 250px;" src="img/newsletter.png">
+                        <img class="img-fluid mt-5" style="height: 250px;" src="img/newsletter.png" alt="email template for cold email">
                     </div>
                 </div>
             </div>
@@ -389,7 +389,7 @@
                         <i class="fa fa-quote-left fa-2x mb-3"></i>
                         <p>Leads grew 30% thanks to Top Leads's targeted campaigns. Highly recommend!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.webp" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" alt="our lead gen client" src="img/testimonial-1.webp" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h6 class="text-white mb-1">Ofelia Gilmore</h6>
                                 <small>Health Services Manager</small>
@@ -400,7 +400,7 @@
                         <i class="fa fa-quote-left fa-2x mb-3"></i>
                         <p>Struggling with lead flow? Top Leads delivered qualified leads fast. A+</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.webp" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" alt="our lead gen client" src="img/testimonial-2.webp" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h6 class="text-white mb-1">Harold F. Kimura</h6>
                                 <small>Financial Manager</small>
@@ -411,7 +411,7 @@
                         <i class="fa fa-quote-left fa-2x mb-3"></i>
                         <p>My business boomed after partnering with Top Leads. They're lead gen experts!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.webp" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" alt="our lead gen client" src="img/testimonial-3.webp" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h6 class="text-white mb-1">Kyle Smith</h6>
                                 <small>Software Developer</small>
@@ -422,7 +422,7 @@
                         <i class="fa fa-quote-left fa-2x mb-3"></i>
                         <p>Stopped wasting time on unqualified leads. Top Leads generates high-quality leads that convert!</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-4.webp" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" alt="our lead gen client" src="img/testimonial-4.webp" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h6 class="text-white mb-1">Patricia D. Rodriquez</h6>
                                 <small>Software Quality Assurance Analyst</small>
