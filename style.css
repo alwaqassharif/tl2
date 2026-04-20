@@ -25,3 +25,35 @@
 .my-float {
   color: inherit; /* Inherit color from the .float class */
 }
+
+
+.card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.badge {
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
+
+
+
+
+
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+#pagination button.active {
+    background-color: #0d6efd;
+    color: white;
+}
