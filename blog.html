@@ -243,8 +243,8 @@ function displayBlogs(page){
 <div class="col-lg-4 col-md-6">
     <a href="${blog.link || '#'}" target="_blank" style="text-decoration:none; color:inherit;">
         <div class="card shadow-sm">
-            <img src="${blog.image}" class="card-img-top">
-            <div class="card-body">
+<img src="${blog.image}" class="card-img-top blog-img">
+<div class="card-body">
                 <span class="badge bg-danger">${blog.category}</span>
                 <h5 class="mt-2">${blog.title}</h5>
                 <small>${new Date(blog.date).toDateString()}</small>
