@@ -1,7 +1,9 @@
 
+
 User-agent: *
-Disallow: 
+Allow: /
 Disallow: /cgi-bin/
-Sitemap: https://gpost.store/
+
+Sitemap: https://gpost.store/sitemap.xml
 Sitemap: https://alwaqassharif.github.io/tl2/sitemap.xml
 
