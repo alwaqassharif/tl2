@@ -107,3 +107,110 @@
     
 })(jQuery);
 
+<script>
+(function () {
+
+  const title = document.title;
+  const description = document.querySelector('meta[name="description"]')?.content || "";
+  const url = window.location.href;
+
+  // 👉 First image get
+  const image = document.querySelector("img")?.src || "";
+
+  // 👉 Detect FAQ
+  let faqs = [];
+  document.querySelectorAll("h3").forEach(q => {
+    let answer = q.nextElementSibling;
+    if(answer && answer.tagName === "P"){
+      faqs.push({
+        "@type": "Question",
+        "name": q.innerText,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": answer.innerText
+        }
+      });
+    }
+  });
+
+  // 👉 Detect if blog page
+  const isBlog = document.querySelector("article");
+
+  // 👉 Article Schema
+  if(isBlog){
+    const articleSchema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": title,
+      "description": description,
+      "image": image,
+      "author": {
+        "@type": "Person",
+        "name": "GPost"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GPost",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://gpost.store/img/logo.png"
+        }
+      },
+      "mainEntityOfPage": url
+    };
+
+    addSchema(articleSchema);
+  }
+
+  // 👉 FAQ Schema
+  if(faqs.length > 0){
+    addSchema({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs
+    });
+  }
+
+  // 👉 Breadcrumb
+  addSchema({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://gpost.store"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": title
+    }]
+  });
+
+  // 👉 Organization (same for all pages)
+  addSchema({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GPost",
+    "url": "https://gpost.store",
+    "logo": "https://gpost.store/img/logo.png"
+  });
+
+  // 👉 Website schema
+  addSchema({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://gpost.store",
+    "name": "GPost"
+  });
+
+  // 👉 Function
+  function addSchema(data){
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
+})();
+</script>
