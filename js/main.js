@@ -16,7 +16,7 @@
 
   document.querySelectorAll("h3").forEach(q => {
     let answer = q.nextElementSibling;
-    if(answer && answer.tagName === "P"){
+    if(answer && answer.tagName === "P" && answer.innerText.trim() !== ""){
       faqs.push({
         "@type": "Question",
         "name": q.innerText,
@@ -33,7 +33,7 @@
     "@type": "BlogPosting",
     "headline": title,
     "description": description,
-    "image": image,
+    "image": image ? [image] : [],
     "author": {
       "@type": "Organization",
       "name": "GPost"
@@ -68,7 +68,8 @@
     },{
       "@type": "ListItem",
       "position": 2,
-      "name": title
+      "name": title,
+      "item": url
     }]
   });
 
