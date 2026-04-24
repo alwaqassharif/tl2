@@ -107,17 +107,14 @@
     
 })(jQuery);
 
-<script>
 (function () {
 
   const title = document.title;
   const description = document.querySelector('meta[name="description"]')?.content || "";
   const url = window.location.href;
 
-  // 👉 First image get
   const image = document.querySelector("img")?.src || "";
 
-  // 👉 Detect FAQ
   let faqs = [];
   document.querySelectorAll("h3").forEach(q => {
     let answer = q.nextElementSibling;
@@ -133,12 +130,10 @@
     }
   });
 
-  // 👉 Detect if blog page
   const isBlog = document.querySelector("article");
 
-  // 👉 Article Schema
   if(isBlog){
-    const articleSchema = {
+    addSchema({
       "@context": "https://schema.org",
       "@type": "Article",
       "headline": title,
@@ -157,12 +152,9 @@
         }
       },
       "mainEntityOfPage": url
-    };
-
-    addSchema(articleSchema);
+    });
   }
 
-  // 👉 FAQ Schema
   if(faqs.length > 0){
     addSchema({
       "@context": "https://schema.org",
@@ -171,7 +163,6 @@
     });
   }
 
-  // 👉 Breadcrumb
   addSchema({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -187,7 +178,6 @@
     }]
   });
 
-  // 👉 Organization (same for all pages)
   addSchema({
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -196,7 +186,6 @@
     "logo": "https://gpost.store/img/logo.png"
   });
 
-  // 👉 Website schema
   addSchema({
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -204,7 +193,6 @@
     "name": "GPost"
   });
 
-  // 👉 Function
   function addSchema(data){
     const script = document.createElement("script");
     script.type = "application/ld+json";
@@ -213,4 +201,3 @@
   }
 
 })();
-</script>
