@@ -3,7 +3,7 @@
 User-agent: *
 Allow: /
 Disallow: /cgi-bin/
-
+Disallow: https://gpost.store/img/favicon.ico
 Sitemap: https://gpost.store/sitemap.xml
 Sitemap: https://alwaqassharif.github.io/tl2/sitemap.xml
 
