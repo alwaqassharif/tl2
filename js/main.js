@@ -21,19 +21,43 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("img")?.src ||
       "";
 
+    // ✅ Detect homepage
+    const isHomePage = window.location.pathname === "/" || window.location.pathname.includes("index");
+
+    // ❌ Homepage → No dynamic schema
+    if (isHomePage) return;
+
     // =======================
-    // FAQ Schema Generator
+    // BlogPosting Schema
+    // =======================
+    addSchema({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": title,
+      "description": description,
+      "image": image || "https://gpost.store/img/default.jpg",
+      "datePublished": new Date().toISOString(),
+      "dateModified": new Date().toISOString(),
+      "author": {
+        "@type": "Organization",
+        "name": "GPost"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "GPost"
+      },
+      "mainEntityOfPage": url
+    });
+
+    // =======================
+    // FAQ Schema
     // =======================
     let faqs = [];
 
     document.querySelectorAll("h3").forEach(q => {
       let answer = q.nextElementSibling;
 
-      if (
-        answer &&
-        answer.tagName === "P" &&
-        answer.innerText.trim() !== ""
-      ) {
+      if (answer && answer.tagName === "P" && answer.innerText.trim() !== "") {
         faqs.push({
           "@type": "Question",
           "name": q.innerText.trim(),
@@ -45,35 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // =======================
-    // BlogPosting Schema
-    // =======================
-    addSchema({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": title,
-      "description": description,
-      "image": image ? [image] : [],
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
-      "author": {
-        "@type": "Organization",
-        "name": "GPost"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "GPost",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://gpost.store/img/logo.png"
-        }
-      },
-      "mainEntityOfPage": url
-    });
-
-    // =======================
-    // FAQ Schema
-    // =======================
     if (faqs.length > 0) {
       addSchema({
         "@context": "https://schema.org",
@@ -105,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   } catch (error) {
-    console.error("Schema Script Error:", error);
+    console.error("Schema Error:", error);
   }
 
 })();
