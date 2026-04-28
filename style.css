@@ -98,3 +98,30 @@
         height: auto !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+  border-color: #0d6efd;
+}
+
+button:hover {
+  opacity: 0.9;
+}
