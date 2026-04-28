@@ -47,28 +47,7 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-(function(){
-  emailjs.init("GRvl6sx80pRDSvpb_"); // یہاں اپنی Public Key ڈالنا
-})();
-
-document.getElementById("contact-form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  emailjs.sendForm(
-    "service_vt26lqb",     // تمہارا Service ID
-    "template_lsne65p",    // تمہارا Template ID
-    this
-  )
-  .then(function() {
-    alert("Message Sent Successfully!");
-  }, function(error) {
-    alert("Failed: " + JSON.stringify(error));
-  });
-});
-</script>
 <body>
 	
  <!-- <! -- Start2 of whatsapp button -->  
@@ -276,6 +255,35 @@ Contact Us
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+  emailjs.init("GRvl6sx80pRDSvpb_"); // یہاں اپنی Public Key ڈالنا
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_vt26lqb",     // تمہارا Service ID
+    "template_lsne65p",    // تمہارا Template ID
+    this
+  )
+  .then(function() {
+    alert("Message Sent Successfully!");
+  }, function(error) {
+    alert("Failed: " + JSON.stringify(error));
+  });
+});
+</script>
 </body>
 
 </html>
