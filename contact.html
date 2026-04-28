@@ -47,7 +47,28 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
+<script>
+(function(){
+  emailjs.init("service_vt26lqb"); // یہاں اپنی Public Key ڈالنا
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_vt26lqb",     // تمہارا Service ID
+    "YOUR_TEMPLATE_ID",    // تمہارا Template ID
+    this
+  )
+  .then(function() {
+    alert("Message Sent Successfully!");
+  }, function(error) {
+    alert("Failed: " + JSON.stringify(error));
+  });
+});
+</script>
 <body>
 	
  <!-- <! -- Start2 of whatsapp button -->  
@@ -142,59 +163,12 @@ Contact Us
 
 
 
-
-<!-- Include any additional CSS files or styles directly here. -->
-<script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-<script type="text/javascript">
-    (function() {
-        emailjs.init("alwaqassharif@gmail.com"); // Replace with your actual user ID from EmailJS
-    })();
-</script>
-</head>
-
-
-
-<!--  <form method="post" action="https://forms.un-static.com/forms/dfc36721052a4611b4f1f3172e54cf78a408d4f5">			-->
-
-		 <form method="post" action="https://forms.un-static.com/forms/d90e076fe9f4c62f7ce6a71167924b028ebe2f9a">
-  <div class="form-group row">
-    <label for="name" class="col-4 col-form-label">Name</label>
-    <div class="col-8">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <i class="fa fa-user"></i>
-        </div>
-        <input id="name" name="name" placeholder="Please enter your name" type="text" required="required" class="form-control">
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="email" class="col-4 col-form-label">E-mail address</label>
-    <div class="col-8">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <i class="fa fa-envelope"></i>
-        </div>
-        <input id="email" name="email" placeholder="Your e-mail address" type="text" required="required" class="form-control">
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="message" class="col-4 col-form-label">Message</label>
-    <div class="col-8">
-      <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="offset-4 col-8">
-      <button name="submit" type="submit" class="btn btn-primary">Send</button>
-    </div>
-  </div>
+<form id="contact-form">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
 </form>
-<div align="center">
-<!--  <p><small>(Powered by <a rel="nofollow" href="Un-static Forms">Un-static Forms</a>)</small></p>    -->
-</div>
-
 
 
 
