@@ -142,13 +142,40 @@ Contact Us
 
 
 
-<form id="contact-form">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send Message</button>
-</form>
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
 
+      <div class="card shadow-lg border-0 rounded-4 p-4">
+        <h4 class="text-center mb-4">Send Us a Message</h4>
+
+        <form id="contact-form">
+          
+          <div class="mb-3">
+            <input type="text" name="name" class="form-control rounded-pill px-3 py-2" placeholder="Your Name" required>
+          </div>
+
+          <div class="mb-3">
+            <input type="email" name="email" class="form-control rounded-pill px-3 py-2" placeholder="Your Email" required>
+          </div>
+
+          <div class="mb-3">
+            <textarea name="message" rows="4" class="form-control rounded-3 px-3 py-2" placeholder="Your Message" required></textarea>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary rounded-pill py-2">
+              Send Message
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
 
