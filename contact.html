@@ -304,9 +304,10 @@ document.addEventListener("DOMContentLoaded", function() {
       "template_lsne65p",    // Template ID
       this
     )
-    .then(function() {
-      alert("Message Sent Successfully!");
-    }, function(error) {
+   .then(function() {
+  alert("Message Sent Successfully!");
+  document.getElementById("contact-form").reset(); // 👈 یہ لائن add کریں
+}, function(error) {
       alert("Failed: " + JSON.stringify(error));
     });
 
