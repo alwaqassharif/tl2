@@ -1,3 +1,4 @@
+
  <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
   
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
-    
+    <meta name="last-modified" content="2026-04-01">
 <meta name="description" content="High-authority guest posting service with niche backlinks and safe SEO strategies to improve rankings and organic traffic.">
     <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="img/favicon.ico">
@@ -75,7 +76,6 @@
 </div>
         <!-- Spinner End -->
 
-<!--             <img src="..." class="card-img-top blog-img">      -->
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
@@ -161,147 +161,180 @@ Contact Us
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-// ✅ BLOG DATA (ADD MORE IF YOU WANT)
-const blogs = [
+// BLOG DATA
+let blogs = [
   {
-  title: "Best guest posting service 2026",
-  category: "guest posting",
-image: "img/best-guest-posting-service.webp",
-  date: "2026-04-01",
- // link: "./best-guest-posting-service.html"
-	      link: "./best-guest-posting-service.html"
-
-},
-    {title:"Guest Posting Outreach", category:"guest posting",   image: "img/guest-posting-outreach.webp"
-, date:"2026-03-28", link: "./guest-posting-outreach.html"
-	
-	},
- {title:"Guest Post link building", category:"guest posting",   image: "img/guest-post-link-building.webp"
-, date:"2026-03-28", link: "./guest-post-link-building.html"
-	
-	},
-
- {title:"Guest posting for addiction center", category:"guest posting",   image: "img/blogs-that-accept-guest-posts.webp"
-, date:"2026-03-28", link: "./blogs-that-accept-guest-posts.html"
-	
-	},
-{title:"Blogs that accept guest posts", category:"guest posting",   image: "img/where-to-get-guest-posts-for-addiction-center.webp"
-, date:"2026-03-28", link: "./where-to-get-guest-posts-for-addiction-center.html"
-	
-	},
-	
-	{title:"High authority guest posts", category:"guest posting",   image: "img/high-authority-guest-posts.webp"
-, date:"2026-03-28", link: "./high-authority-guest-posts.html"
-	
-	},
-	{title:"Real estate guest posts", category:"guest posting",   image: "img/real-estate-guest-post.webp"
-, date:"2026-03-28", link: "./real-estate-guest-post.html"
-	
-	},
-{title:"Technology guest posts", category:"guest posting",   image: "img/technology-guest-post.webp"
-, date:"2026-03-28", link: "./technology-guest-post.html"
-	
-	},
-{title:"Sports guest posts", category:"guest posting",   image: "img/sports-guest-post.webp"
-, date:"2026-03-28", link: "./sports-guest-post.html"
-	
-	},
-	{title:"White label guest posts", category:"guest posting",   image: "img/white-label-guest-posts.webp"
-, date:"2026-03-28", link: "./white-label-guest-posts.html"
-	
-	},
-
-		{title:"Guest posts Vs nich edits", category:"guest posting",   image: "img/guest-posting-vs-niche-edits.webp"
-, date:"2026-03-28", link: "./guest-posting-vs-niche-edits.html"
-	
-	},
-			{title:"Dofollow guest post guide", category:"guest posting",   image: "img/dofollow-guest-post-guide.webp"
-, date:"2026-03-28", link: "./dofollow-guest-post-guide.html"
-	
-	},
-	
-    {title:"Backlink Strategy", category:"SEO", image:"img/blog-3.jpg", date:"2026-03-20"},
-    {title:"Digital PR Guide", category:"SEO", image:"img/blog-4.jpg", date:"2026-03-15"},
-    {title:"HARO Backlinks", category:"SEO", image:"img/blog-1.jpg", date:"2026-03-10"},
-    {title:"Link Building Tips", category:"SEO", image:"img/blog-2.jpg", date:"2026-03-05"},
-    {title:"Off Page SEO", category:"SEO", image:"img/blog-3.jpg", date:"2026-03-01"},
-    {title:"High DA Backlinks", category:"SEO", image:"img/blog-4.jpg", date:"2026-02-25"},
-    {title:"Google Ranking Guide", category:"SEO", image:"img/blog-1.jpg", date:"2026-02-20"},
-    {title:"Technical SEO", category:"SEO", image:"img/blog-2.jpg", date:"2026-02-15"},
-    {title:"On Page SEO", category:"SEO", image:"img/blog-3.jpg", date:"2026-02-10"}
+    id: "blog1",
+    title: "Best guest posting service 2026",
+    category: "guest posting",
+    image: "img/best-guest-posting-service.webp",
+    link: "./best-guest-posting-service.html"
+  },
+  {
+    id: "blog2",
+    title: "Guest Posting Outreach",
+    category: "guest posting",
+    image: "img/guest-posting-outreach.webp",
+    link: "./guest-posting-outreach.html"
+  },
+  {
+    id: "blog3",
+    title: "Guest Post link building",
+    category: "guest posting",
+    image: "img/guest-post-link-building.webp",
+    link: "./guest-post-link-building.html"
+  },
+  {
+    id: "blog4",
+    title: "Guest posting for addiction center1",
+    category: "guest posting",
+    image: "img/blogs-that-accept-guest-posts.webp",
+    link: "./blogs-that-accept-guest-posts.html"
+  },
+  {
+    id: "blog5",
+    title: "Blogs that accept guest posts",
+    category: "guest posting",
+    image: "img/where-to-get-guest-posts-for-addiction-center.webp",
+    link: "./where-to-get-guest-posts-for-addiction-center.html"
+  },
+  {
+    id: "blog6",
+    title: "High authority guest posts",
+    category: "guest posting",
+    image: "img/high-authority-guest-posts.webp",
+    link: "./high-authority-guest-posts.html"
+  },
+  {
+    id: "blog7",
+    title: "Real estate guest posts",
+    category: "guest posting",
+    image: "img/real-estate-guest-post.webp",
+    link: "./real-estate-guest-post.html"
+  },
+  {
+    id: "blog8",
+    title: "Technology guest posts",
+    category: "guest posting",
+    image: "img/technology-guest-post.webp",
+    link: "./technology-guest-post.html"
+  },
+  {
+    id: "blog9",
+    title: "Sports guest posts",
+    category: "guest posting",
+    image: "img/sports-guest-post.webp",
+    link: "./sports-guest-post.html"
+  },
+  {
+    id: "blog10",
+    title: "White label guest posts",
+    category: "guest posting",
+    image: "img/white-label-guest-posts.webp",
+    link: "./white-label-guest-posts.html"
+  },
+  {
+    id: "blog11",
+    title: "Guest posts Vs niche edits",
+    category: "guest posting",
+    image: "img/guest-posting-vs-niche-edits.webp",
+    link: "./guest-posting-vs-niche-edits.html"
+  },
+  {
+    id: "blog12",
+    title: "Dofollow guest post guide",
+    category: "guest posting",
+    image: "img/dofollow-guest-post-guide.webp",
+    link: "./dofollow-guest-post-guide.html"
+  }
 ];
 
-// ✅ SORT LATEST FIRST
-blogs.sort((a,b)=> new Date(b.date)-new Date(a.date));
+// SAVE / LOAD LAST UPDATED
+blogs.forEach(blog => {
+  let saved = localStorage.getItem(blog.id);
+  saved = saved ? JSON.parse(saved) : null;
+
+  let now = new Date().toISOString();
+
+  if (!saved) {
+    blog.lastUpdated = now;
+    localStorage.setItem(blog.id, JSON.stringify({
+      lastUpdated: now,
+      title: blog.title
+    }));
+  } else {
+    if (saved.title !== blog.title) {
+      blog.lastUpdated = now;
+      localStorage.setItem(blog.id, JSON.stringify({
+        lastUpdated: now,
+        title: blog.title
+      }));
+    } else {
+      blog.lastUpdated = saved.lastUpdated;
+    }
+  }
+});
+
+// SORT LATEST FIRST
+blogs.sort((a, b) =>
+  new Date(b.lastUpdated || 0) - new Date(a.lastUpdated || 0)
+);
 
 const perPage = 9;
 let currentPage = 1;
 
-function displayBlogs(page){
-    const container = document.getElementById("blog-container");
-    container.innerHTML = "";
+function displayBlogs(page) {
+  const container = document.getElementById("blog-container");
+  container.innerHTML = "";
 
-    const start = (page-1)*perPage;
-    const end = start + perPage;
-    const paginated = blogs.slice(start,end);
+  const start = (page - 1) * perPage;
+  const end = start + perPage;
 
-    paginated.forEach(blog=>{
-        <!-- container.innerHTML += ` -->
-        <!-- <div class="col-lg-4 col-md-6"> -->
-            <!-- <div class="card shadow-sm"> -->
-                <!-- <img src="${blog.image}" class="card-img-top"> -->
-                <!-- <div class="card-body"> -->
-                    <!-- <span class="badge bg-danger">${blog.category}</span> -->
-                    <!-- <h5 class="mt-2">${blog.title}</h5> -->
-                    <!-- <small>${new Date(blog.date).toDateString()}</small> -->
-                <!-- </div> -->
-            <!-- </div> -->
-        <!-- </div>`; -->
-		
-		
-		container.innerHTML += `
-<div class="col-lg-4 col-md-6">
-    <a href="${blog.link || '#'}" target="_blank" style="text-decoration:none; color:inherit;">
-        <div class="card shadow-sm">
-<img src="${blog.image}" class="card-img-top blog-img">
-<div class="card-body">
-                <span class="badge bg-danger">${blog.category}</span>
-                <h5 class="mt-2">${blog.title}</h5>
-                <small>${new Date(blog.date).toDateString()}</small>
+  blogs.slice(start, end).forEach(blog => {
+    container.innerHTML += `
+      <div class="col-lg-4 col-md-6">
+        <a href="${blog.link}" style="text-decoration:none; color:inherit;">
+          <div class="card shadow-sm">
+            <img src="${blog.image}" class="card-img-top blog-img">
+            <div class="card-body">
+              <span class="badge bg-danger">${blog.category}</span>
+              <h5 class="mt-2">${blog.title}</h5>
+              <small>${new Date(blog.lastUpdated).toDateString()}</small>
             </div>
-        </div>
-    </a>
-</div>`;
-    });
+          </div>
+        </a>
+      </div>`;
+  });
 }
 
-function setupPagination(){
-    const pageCount = Math.ceil(blogs.length / perPage);
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML = "";
+function setupPagination() {
+  const pagination = document.getElementById("pagination");
+  const pageCount = Math.ceil(blogs.length / perPage);
 
-    for(let i=1;i<=pageCount;i++){
-        pagination.innerHTML += `
-        <li class="page-item ${i===currentPage?'active':''}">
-            <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
-        </li>`;
-    }
+  pagination.innerHTML = "";
+
+  for (let i = 1; i <= pageCount; i++) {
+    pagination.innerHTML += `
+      <li class="page-item ${i === currentPage ? "active" : ""}">
+        <a class="page-link" href="#" onclick="changePage(${i})">${i}</a>
+      </li>`;
+  }
 }
 
-function changePage(page){
-    currentPage = page;
-    displayBlogs(page);
-    setupPagination();
+function changePage(page) {
+  currentPage = page;
+  displayBlogs(page);
+  setupPagination();
 }
 
 // INIT
 displayBlogs(currentPage);
 setupPagination();
 
-// ✅ SPINNER REMOVE (IMPORTANT FIX)
-window.onload = function(){
-    document.getElementById("spinner").style.display="none";
-}
+// SPINNER FIX
+window.onload = function () {
+  document.getElementById("spinner").style.display = "none";
+};
 </script>
   <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
@@ -310,13 +343,7 @@ window.onload = function(){
                         <h5 class="text-white mb-4">Get In Touch</h5>
                <h5 class="text-white mb-4"><b>Contact</b></h5>
                           <p><i class="fa fa-envelope me-3"></i>info@gpost.store</p>
-                        <!-- <div class="d-flex pt-2"> -->
-                             <!-- <a class="btn btn-outline-light btn-social" href="https://x.com/topleads2"><i class="fab fa-twitter"></i></a> -->
-                            <!-- <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61560710145433"><i class="fab fa-facebook-f"></i></a> -->
-                            <!-- <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UCYN7LWHnemMdhcw42sfLfyg"><i class="fab fa-youtube"></i></a> -->
-                            <!-- <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/topleads2"><i class="fab fa-instagram"></i></a> -->
-                            <!-- <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/top-leads1/about/"><i class="fab fa-linkedin-in"></i></a> -->
-                        <!-- </div> -->
+                      
                     </div>
                     <div class="col-md-6 col-lg-3">
                        
@@ -364,7 +391,6 @@ window.onload = function(){
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                             &copy; <a class="border-bottom" href="#">2026 GPost</a>, All Right Reserved. 
 							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
 							Designed By <a class="border-bottom" href="https://gpost.store">GPost</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
