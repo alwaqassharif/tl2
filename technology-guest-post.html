@@ -284,6 +284,39 @@ Contact Us
 </div>
 	<!-- ++++++++++++++++++++++++++++++++++Article Ends Here++++++++++++++++++++++++++++++++++++++++++++++ -->
          </article>
+		 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+	 
+	 
+	 <div class="container mt-5">
+  <h3 class="mb-4 text-center">🔥 Related Articles</h3>
+
+  <div id="related-posts" class="d-flex flex-wrap justify-content-center gap-3"></div>
+</div>
+<style>
+.related-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.related-btn:hover {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  color: #fff;
+}
+</style>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
 <!-- Footer Start -->
         <div class="container-fluid bg-primary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5 px-lg-5">
@@ -380,6 +413,39 @@ Contact Us
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	 <script src="/posts-data.js"></script>
+
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.getElementById("related-posts");
+
+  if (!container) return;
+  if (typeof POSTS_DATA === "undefined") return;
+
+  const currentPage = window.location.pathname.split("/").pop();
+
+  const filteredPosts = POSTS_DATA.filter(post => !post.link.includes(currentPage));
+
+  // better shuffle
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  const randomPosts = shuffle(filteredPosts).slice(0, 5);
+
+  randomPosts.forEach(post => {
+    container.innerHTML += `
+      <a href="${post.link}" class="related-btn">🔥 ${post.title}</a>
+    `;
+  });
+
+});
+</script>
 </body>
 
 </html>
