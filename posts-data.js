@@ -13,5 +13,5 @@ const POSTS_DATA = [
   { title: "White label guest posts", link: "/white-label-guest-posts.html", category: "guest-posting" },
   { title: "Guest posts Vs niche edits", link: "/guest-posting-vs-niche-edits.html" , category: "guest-posting"},
   { title: "Dofollow guest post guide", link: "/dofollow-guest-post-guide.html", category: "guest-posting" },
-   { title: "Dofollow guest post guide", link: "/dofollow-guest-post-guide.html", category: "guest-posting" }
+   { title: "Blogger Outreach Case Study", link: "/blogger-outreach-case-study.html", category: "guest-posting" }
 ];
