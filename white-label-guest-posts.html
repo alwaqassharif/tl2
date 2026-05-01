@@ -318,7 +318,6 @@ Contact Us
 	 
 	 <div class="container mt-5">
   <h3 class="mb-4 text-center">🔥 Related Articles</h3>
-		 	 <div id="related-posts" class="d-flex flex-wrap justify-content-center gap-3"></div>
 
   <div id="related-posts" class="d-flex flex-wrap justify-content-center gap-3"></div>
 </div>
@@ -453,35 +452,36 @@ Contact Us
 	
 	
 
-<script src="/posts-data.js"></script>
 
 
  <script src="/posts-data.js"></script>
 
-<script>
+ <script>
 document.addEventListener("DOMContentLoaded", function () {
 
   const container = document.getElementById("related-posts");
 
-  if (!container) {
-    console.log("Container not found");
-    return;
-  }
-
-  if (typeof POSTS_DATA === "undefined") {
-    console.log("POSTS_DATA not loaded");
-    return;
-  }
+  if (!container) return;
+  if (typeof POSTS_DATA === "undefined") return;
 
   const currentPage = window.location.pathname.split("/").pop();
 
   const filteredPosts = POSTS_DATA.filter(post => !post.link.includes(currentPage));
 
-  const randomPosts = filteredPosts.sort(() => 0.5 - Math.random()).slice(0, 5);
+  // better shuffle
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  const randomPosts = shuffle(filteredPosts).slice(0, 5);
 
   randomPosts.forEach(post => {
     container.innerHTML += `
-      <a href="${post.link}" class="related-btn">${post.title}</a>
+      <a href="${post.link}" class="related-btn">🔥 ${post.title}</a>
     `;
   });
 
