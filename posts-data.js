@@ -14,5 +14,6 @@ const POSTS_DATA = [
   { title: "Guest posts Vs niche edits", link: "/guest-posting-vs-niche-edits.html" , category: "guest-posting"},
   { title: "Dofollow guest post guide", link: "/dofollow-guest-post-guide.html", category: "guest-posting" },
    { title: "Blogger Outreach Case Study", link: "/blogger-outreach-case-study.html", category: "guest-posting" }, 
+   { title: "Guest Post & Blogger Outreach Service 2026", link: "/guest-post-&-Blogger-outreach-service-2026.html", category: "guest-posting" }, 
  { title: "Buy link insertions", link: "/buy-link-insertions.html", category: "guest-posting" }
 ];
