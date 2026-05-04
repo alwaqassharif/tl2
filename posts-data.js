@@ -16,7 +16,8 @@ const POSTS_DATA = [
    { title: "Blogger Outreach Case Study", link: "/blogger-outreach-case-study.html", category: "guest-posting" }, 
    { title: "Guest Post & Blogger Outreach Service 2026", link: "/guest-post-&-Blogger-outreach-service-2026.html", category: "guest-posting" }, 
  { title: "Buy link insertions", link: "/buy-link-insertions.html", category: "guest-posting" },
+ { title: "Outreach Response Rate Increase Tips", link: "/outreach-response-rate-increase-tips-for-2026-seo.html", category: "guest-posting" },
+  { title: "How to Pitch Bloggers Effectively", link: "/how-to-pitch-bloggers-effectively.html", category: "guest-posting" },
  { title: "Blogger Outreach White Label Service in 2026", link: "/blogger-outreach-white-label-service-2026.html", category: "guest-posting" }
-
-
+ 
 ];
