@@ -18,6 +18,11 @@ const POSTS_DATA = [
  { title: "Buy link insertions", link: "/buy-link-insertions.html", category: "guest-posting" },
  { title: "Outreach Response Rate Increase Tips", link: "/outreach-response-rate-increase-tips-for-2026-seo.html", category: "guest-posting" },
   { title: "How to Pitch Bloggers Effectively", link: "/how-to-pitch-bloggers-effectively.html", category: "guest-posting" },
- { title: "Blogger Outreach White Label Service in 2026", link: "/blogger-outreach-white-label-service-2026.html", category: "guest-posting" }
+ { title: "Blogger Outreach White Label Service in 2026", link: "/blogger-outreach-white-label-service-2026.html", category: "guest-posting" },
+  { title: "SEO backlink strategy in 2026", link: "/seo-backlink-strategy-2026.html", category: "guest-posting" }
+
+
+
+
  
 ];
