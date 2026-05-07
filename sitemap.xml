@@ -5,7 +5,7 @@
 <!-- Homepage -->
 <url>
   <loc>https://gpost.store/</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>1.0</priority>
 </url>
 <!-- Main Service Pages -->
@@ -124,46 +124,48 @@
   <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
+
+
 <!-- Static Pages -->
 <url>
   <loc>https://gpost.store/about.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https://gpost.store/service.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https://gpost.store/contact.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https://gpost.store/privacypolicy.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https://gpost.store/termsandconditions.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https://gpost.store/disclaimer.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
 <url>
   <loc>https://gpost.store/blog.html</loc>
-  <lastmod>2024-06-25T06:57:18+00:00</lastmod>
+  <lastmod>2026-05-07T12:00:00+05:00</lastmod>
   <priority>0.5</priority>
 </url>
 
