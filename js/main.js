@@ -49,33 +49,87 @@ document.addEventListener("DOMContentLoaded", function () {
       "mainEntityOfPage": url
     });
 
-    // =======================
-    // FAQ Schema
-    // =======================
-    let faqs = [];
+    // // =======================
+    // // FAQ Schema
+    // // =======================
+    // let faqs = [];
 
-    document.querySelectorAll("h3").forEach(q => {
-      let answer = q.nextElementSibling;
+    // document.querySelectorAll("h3").forEach(q => {
+    //   let answer = q.nextElementSibling;
 
-      if (answer && answer.tagName === "P" && answer.innerText.trim() !== "") {
+    //   if (answer && answer.tagName === "P" && answer.innerText.trim() !== "") {
+    //     faqs.push({
+    //       "@type": "Question",
+    //       "name": q.innerText.trim(),
+    //       "acceptedAnswer": {
+    //         "@type": "Answer",
+    //         "text": answer.innerText.trim()
+    //       }
+    //     });
+    //   }
+    // });
+
+    // if (faqs.length > 0) {
+    //   addSchema({
+    //     "@context": "https://schema.org",
+    //     "@type": "FAQPage",
+    //     "mainEntity": faqs
+    //   });
+    // }
+
+
+
+    // =======================
+// FAQ Schema
+// =======================
+
+let faqs = [];
+
+// صرف FAQs heading کے بعد والے سوالات پکڑو
+const faqSection = Array.from(document.querySelectorAll("h2"))
+  .find(h2 => h2.innerText.trim().toLowerCase() === "faqs");
+
+if (faqSection) {
+
+  let current = faqSection.nextElementSibling;
+
+  while (current) {
+
+    // اگلا H2 آئے تو FAQs ختم
+    if (current.tagName === "H2") break;
+
+    // صرف H3 سوالات پکڑو
+    if (current.tagName === "H3") {
+
+      let answer = current.nextElementSibling;
+
+      if (answer && answer.tagName === "P") {
+
         faqs.push({
           "@type": "Question",
-          "name": q.innerText.trim(),
+          "name": current.innerText.trim(),
           "acceptedAnswer": {
             "@type": "Answer",
             "text": answer.innerText.trim()
           }
         });
-      }
-    });
 
-    if (faqs.length > 0) {
-      addSchema({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs
-      });
+      }
     }
+
+    current = current.nextElementSibling;
+  }
+}
+
+if (faqs.length > 0) {
+
+  addSchema({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs
+  });
+
+}
 
     // =======================
     // Breadcrumb Schema
