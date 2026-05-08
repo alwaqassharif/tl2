@@ -35,13 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
       "https://gpost.store/img/default.jpg";
 
     // =========================
-    // Detect Homepage
+    // Detect Blog Page
     // =========================
-    const isHomePage =
-      window.location.pathname === "/" ||
-      window.location.pathname.includes("index");
-
-    if (isHomePage) return;
+    const isBlogPage =
+      window.location.pathname.includes("/blog") ||
+      document.querySelector("article");
 
     // =========================
     // Dates
@@ -58,42 +56,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // =========================
     // BLOG POSTING SCHEMA
+    // Only for Blog Pages
     // =========================
-    addSchema({
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "@id": url + "#blogposting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": url
-      },
-      "headline": title,
-      "description": description,
-      "image": {
-        "@type": "ImageObject",
-        "url": image
-      },
-      "datePublished": publishedDate,
-      "dateModified": modifiedDate,
-      "author": {
-        "@type": "Organization",
-        "name": "GPost",
-        "url": "https://gpost.store/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "GPost",
-        "logo": {
+    if (isBlogPage) {
+
+      addSchema({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": url + "#blogposting",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": url
+        },
+        "headline": title,
+        "description": description,
+        "image": {
           "@type": "ImageObject",
-          "url": "https://gpost.store/img/logo.png"
+          "url": image
+        },
+        "datePublished": publishedDate,
+        "dateModified": modifiedDate,
+        "author": {
+          "@type": "Organization",
+          "name": "GPost",
+          "url": "https://gpost.store/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "GPost",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gpost.store/img/logo.png"
+          }
         }
-      }
-    });
+      });
+
+    } else {
+
+      // =========================
+      // WEBPAGE SCHEMA
+      // For Service/About/Home Pages
+      // =========================
+      addSchema({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": url + "#webpage",
+        "url": url,
+        "name": title,
+        "description": description,
+        "image": image,
+        "publisher": {
+          "@type": "Organization",
+          "name": "GPost",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gpost.store/img/logo.png"
+          }
+        }
+      });
+
+    }
 
     // =========================
-    // FAQ SCHEMA (IMPROVED)
+    // FAQ SCHEMA
     // =========================
-
     let faqs = [];
 
     const faqSection = Array.from(
@@ -108,10 +134,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       while (current) {
 
-        // Stop at next section heading
         if (current.tagName === "H2") break;
 
-        // Support H3 and H4 questions
         if (current.tagName === "H3" || current.tagName === "H4") {
 
           let question = current.textContent.trim();
@@ -119,7 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
           let answerText = "";
           let answerNode = current.nextElementSibling;
 
-          // Collect multiple paragraphs until next heading
           while (
             answerNode &&
             answerNode.tagName !== "H2" &&
