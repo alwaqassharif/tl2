@@ -4,157 +4,221 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
 
-    function addSchema(data){
+    // =========================
+    // Helper Function
+    // =========================
+    function addSchema(data) {
+
       const script = document.createElement("script");
+
       script.type = "application/ld+json";
+
       script.text = JSON.stringify(data);
+
       document.head.appendChild(script);
     }
 
-    const title = document.title || "";
-    const description = document.querySelector('meta[name="description"]')?.content || "";
-    const url = window.location.href;
+    // =========================
+    // Basic Data
+    // =========================
+    const title =
+      document.title.replace(/\s+/g, " ").trim() || "";
+
+    const description =
+      document.querySelector('meta[name="description"]')
+      ?.content
+      ?.trim() || "";
+
+    const url =
+      window.location.href.split("#")[0];
 
     const image =
       document.querySelector("figure img")?.src ||
       document.querySelector("article img")?.src ||
       document.querySelector("img")?.src ||
-      "";
+      "https://gpost.store/img/default.jpg";
 
-    // ✅ Detect homepage
-    const isHomePage = window.location.pathname === "/" || window.location.pathname.includes("index");
+    // =========================
+    // Detect Homepage
+    // =========================
+    const isHomePage =
+      window.location.pathname === "/" ||
+      window.location.pathname.includes("index");
 
-    // ❌ Homepage → No dynamic schema
+    // Homepage پر schema skip
     if (isHomePage) return;
 
-    // =======================
+    // =========================
+    // Dates
+    // =========================
+
+    // اگر meta tags موجود ہوں تو وہ use ہوں گے
+    // ورنہ current date fallback ہوگی
+
+    const publishedDate =
+      document.querySelector('meta[name="published_date"]')
+      ?.content ||
+      new Date().toISOString();
+
+    const modifiedDate =
+      document.querySelector('meta[name="modified_date"]')
+      ?.content ||
+      new Date().toISOString();
+
+    // =========================
     // BlogPosting Schema
-    // =======================
+    // =========================
     addSchema({
+
       "@context": "https://schema.org",
+
       "@type": "BlogPosting",
+
+      "@id": url + "#blogposting",
+
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": url
+      },
+
       "headline": title,
+
       "description": description,
-      "image": image || "https://gpost.store/img/default.jpg",
-      "datePublished": new Date().toISOString(),
-      "dateModified": new Date().toISOString(),
+
+      "image": {
+        "@type": "ImageObject",
+        "url": image
+      },
+
+      "datePublished": publishedDate,
+
+      "dateModified": modifiedDate,
+
       "author": {
         "@type": "Organization",
-        "name": "GPost"
+        "name": "GPost",
+        "url": "https://gpost.store/"
       },
+
       "publisher": {
         "@type": "Organization",
-        "name": "GPost"
-      },
-      "mainEntityOfPage": url
+        "name": "GPost",
+
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://gpost.store/img/logo.png"
+        }
+      }
+
     });
 
-    // // =======================
-    // // FAQ Schema
-    // // =======================
-    // let faqs = [];
+    // =========================
+    // FAQ Schema
+    // =========================
 
-    // document.querySelectorAll("h3").forEach(q => {
-    //   let answer = q.nextElementSibling;
+    let faqs = [];
 
-    //   if (answer && answer.tagName === "P" && answer.innerText.trim() !== "") {
-    //     faqs.push({
-    //       "@type": "Question",
-    //       "name": q.innerText.trim(),
-    //       "acceptedAnswer": {
-    //         "@type": "Answer",
-    //         "text": answer.innerText.trim()
-    //       }
-    //     });
-    //   }
-    // });
+    // صرف FAQs heading کے بعد والے سوالات
+    const faqSection = Array.from(
+      document.querySelectorAll("h2")
+    ).find(h2 =>
+      h2.innerText.trim().toLowerCase() === "faqs"
+    );
 
-    // if (faqs.length > 0) {
-    //   addSchema({
-    //     "@context": "https://schema.org",
-    //     "@type": "FAQPage",
-    //     "mainEntity": faqs
-    //   });
-    // }
+    if (faqSection) {
 
+      let current = faqSection.nextElementSibling;
 
+      while (current) {
 
-    // =======================
-// FAQ Schema
-// =======================
+        // اگلا H2 آئے تو FAQs ختم
+        if (current.tagName === "H2") break;
 
-let faqs = [];
+        // صرف H3 سوالات
+        if (current.tagName === "H3") {
 
-// صرف FAQs heading کے بعد والے سوالات پکڑو
-const faqSection = Array.from(document.querySelectorAll("h2"))
-  .find(h2 => h2.innerText.trim().toLowerCase() === "faqs");
+          let answer = current.nextElementSibling;
 
-if (faqSection) {
+          if (
+            answer &&
+            answer.tagName === "P" &&
+            answer.textContent.trim() !== ""
+          ) {
 
-  let current = faqSection.nextElementSibling;
+            faqs.push({
 
-  while (current) {
+              "@type": "Question",
 
-    // اگلا H2 آئے تو FAQs ختم
-    if (current.tagName === "H2") break;
+              "name": current.textContent.trim(),
 
-    // صرف H3 سوالات پکڑو
-    if (current.tagName === "H3") {
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": answer.textContent.trim()
+              }
 
-      let answer = current.nextElementSibling;
+            });
 
-      if (answer && answer.tagName === "P") {
-
-        faqs.push({
-          "@type": "Question",
-          "name": current.innerText.trim(),
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": answer.innerText.trim()
           }
-        });
 
+        }
+
+        current = current.nextElementSibling;
       }
+
     }
 
-    current = current.nextElementSibling;
-  }
-}
+    // اگر FAQs موجود ہوں
+    if (faqs.length > 0) {
 
-if (faqs.length > 0) {
+      addSchema({
 
-  addSchema({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs
-  });
+        "@context": "https://schema.org",
 
-}
+        "@type": "FAQPage",
 
-    // =======================
+        "@id": url + "#faq",
+
+        "mainEntity": faqs
+
+      });
+
+    }
+
+    // =========================
     // Breadcrumb Schema
-    // =======================
+    // =========================
     addSchema({
+
       "@context": "https://schema.org",
+
       "@type": "BreadcrumbList",
+
+      "@id": url + "#breadcrumb",
+
       "itemListElement": [
+
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://gpost.store"
+          "item": "https://gpost.store/"
         },
+
         {
           "@type": "ListItem",
           "position": 2,
           "name": title,
           "item": url
         }
+
       ]
+
     });
 
   } catch (error) {
+
     console.error("Schema Error:", error);
+
   }
 
 })();
