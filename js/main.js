@@ -8,13 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Helper Function
     // =========================
     function addSchema(data) {
-
       const script = document.createElement("script");
-
       script.type = "application/ld+json";
-
       script.text = JSON.stringify(data);
-
       document.head.appendChild(script);
     }
 
@@ -45,16 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.pathname === "/" ||
       window.location.pathname.includes("index");
 
-    // Homepage پر schema skip
     if (isHomePage) return;
 
     // =========================
     // Dates
     // =========================
-
-    // اگر meta tags موجود ہوں تو وہ use ہوں گے
-    // ورنہ current date fallback ہوگی
-
     const publishedDate =
       document.querySelector('meta[name="published_date"]')
       ?.content ||
@@ -66,63 +57,49 @@ document.addEventListener("DOMContentLoaded", function () {
       new Date().toISOString();
 
     // =========================
-    // BlogPosting Schema
+    // BLOG POSTING SCHEMA
     // =========================
     addSchema({
-
       "@context": "https://schema.org",
-
       "@type": "BlogPosting",
-
       "@id": url + "#blogposting",
-
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": url
       },
-
       "headline": title,
-
       "description": description,
-
       "image": {
         "@type": "ImageObject",
         "url": image
       },
-
       "datePublished": publishedDate,
-
       "dateModified": modifiedDate,
-
       "author": {
         "@type": "Organization",
         "name": "GPost",
         "url": "https://gpost.store/"
       },
-
       "publisher": {
         "@type": "Organization",
         "name": "GPost",
-
         "logo": {
           "@type": "ImageObject",
           "url": "https://gpost.store/img/logo.png"
         }
       }
-
     });
 
     // =========================
-    // FAQ Schema
+    // FAQ SCHEMA (IMPROVED)
     // =========================
 
     let faqs = [];
 
-    // صرف FAQs heading کے بعد والے سوالات
     const faqSection = Array.from(
       document.querySelectorAll("h2")
     ).find(h2 =>
-      h2.innerText.trim().toLowerCase() === "faqs"
+      h2.innerText.toLowerCase().includes("faq")
     );
 
     if (faqSection) {
@@ -131,94 +108,80 @@ document.addEventListener("DOMContentLoaded", function () {
 
       while (current) {
 
-        // اگلا H2 آئے تو FAQs ختم
+        // Stop at next section heading
         if (current.tagName === "H2") break;
 
-        // صرف H3 سوالات
-        if (current.tagName === "H3") {
+        // Support H3 and H4 questions
+        if (current.tagName === "H3" || current.tagName === "H4") {
 
-          let answer = current.nextElementSibling;
+          let question = current.textContent.trim();
 
-          if (
-            answer &&
-            answer.tagName === "P" &&
-            answer.textContent.trim() !== ""
+          let answerText = "";
+          let answerNode = current.nextElementSibling;
+
+          // Collect multiple paragraphs until next heading
+          while (
+            answerNode &&
+            answerNode.tagName !== "H2" &&
+            answerNode.tagName !== "H3" &&
+            answerNode.tagName !== "H4"
           ) {
-
-            faqs.push({
-
-              "@type": "Question",
-
-              "name": current.textContent.trim(),
-
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": answer.textContent.trim()
-              }
-
-            });
-
+            if (answerNode.textContent.trim()) {
+              answerText += answerNode.textContent.trim() + " ";
+            }
+            answerNode = answerNode.nextElementSibling;
           }
 
+          if (question && answerText.trim()) {
+            faqs.push({
+              "@type": "Question",
+              "name": question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": answerText.trim()
+              }
+            });
+          }
         }
 
         current = current.nextElementSibling;
       }
-
     }
 
-    // اگر FAQs موجود ہوں
     if (faqs.length > 0) {
-
       addSchema({
-
         "@context": "https://schema.org",
-
         "@type": "FAQPage",
-
         "@id": url + "#faq",
-
         "mainEntity": faqs
-
       });
-
     }
 
     // =========================
-    // Breadcrumb Schema
+    // BREADCRUMB SCHEMA
     // =========================
     addSchema({
-
       "@context": "https://schema.org",
-
       "@type": "BreadcrumbList",
-
       "@id": url + "#breadcrumb",
-
       "itemListElement": [
-
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
           "item": "https://gpost.store/"
         },
-
         {
           "@type": "ListItem",
           "position": 2,
           "name": title,
           "item": url
         }
-
       ]
-
     });
 
   } catch (error) {
-
     console.error("Schema Error:", error);
-
   }
 
 })();
