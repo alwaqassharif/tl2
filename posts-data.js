@@ -21,8 +21,8 @@ const POSTS_DATA = [
  { title: "Blogger Outreach White Label Service in 2026", link: "/blogger-outreach-white-label-service-2026.html", category: "guest-posting" },
   { title: "Is Guest Posting White Hat or Grey Hat SEO", link: "/is-guest-posting-white-hat-or-grey-hat-seo.html", category: "guest-posting" },
   { title: "SEO backlink strategy in 2026", link: "/seo-backlink-strategy-2026.html", category: "guest-posting" },
- { title: "Link building pr vs digital pr", link: "/link-building-pr-vs-digital-pr.html", category: "guest-posting" }
+ { title: "Link building pr vs digital pr", link: "/link-building-pr-vs-digital-pr.html", category: "guest-posting" },
+{ title: "Shopify Link Building Strategy 2026", link: "/shopify-link-building-strategy-2026.html", category: "guest-posting" }
 
-
-
+ 
 ];
