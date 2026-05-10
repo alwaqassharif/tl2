@@ -23,6 +23,9 @@ const POSTS_DATA = [
   { title: "SEO backlink strategy in 2026", link: "/seo-backlink-strategy-2026.html", category: "guest-posting" },
  { title: "Link building pr vs digital pr", link: "/link-building-pr-vs-digital-pr.html", category: "guest-posting" },
 { title: "Shopify Link Building Strategy 2026", link: "/shopify-link-building-strategy-2026.html", category: "guest-posting" },
-{ title: "Link building for new Shopify website", link: "/ link-building-for-new-shopify-website.html", category: "guest-posting" }
+{ title: "Link building for new Shopify website", link: "/link-building-for-new-shopify-website.html", category: "guest-posting" },
+{ title: "Local SEO Guest Posting Strategy", link: "/local-seo-guest-posting-strategy.html", category: "guest-posting" }
 
 ];
+
+
