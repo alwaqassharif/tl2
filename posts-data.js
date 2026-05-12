@@ -27,7 +27,8 @@ const POSTS_DATA = [
 { title: "Local SEO Guest Posting Strategy", link: "/local-seo-guest-posting-strategy.html", category: "guest-posting" },
 { title: "Content Writing for Guest Posts", link: "/content-writing-for-guest-posts.html", category: "guest-posting" },
 { title: "Health blogs that accept guest posts", link: "/health-blogs-that-accept-guest-posts.html", category: "guest-posting" },
-{ title: "Broken Link Building Strategy", link: "/broken-link-building-strategy.html", category: "guest-posting" }
+{ title: "Broken Link Building Strategy", link: "/broken-link-building-strategy.html", category: "guest-posting" },
+{ title: "How to Sell Guest Posting Services on Fiverr", link: "/how-to-sell-guest-posting-services-on-fiverr.html", category: "guest-posting" }
 ];
 
 
