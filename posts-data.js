@@ -29,8 +29,8 @@ const POSTS_DATA = [
 { title: "Health blogs that accept guest posts", link: "/health-blogs-that-accept-guest-posts.html", category: "guest-posting" },
 { title: "Broken Link Building Strategy", link: "/broken-link-building-strategy.html", category: "guest-posting" },
 { title: "How to Sell Guest Posting Services on Fiverr", link: "/how-to-sell-guest-posting-services-on-fiverr.html", category: "guest-posting" },
-{ title: "Competitor Backlink Spying Strategy", link: "/competitor-backlink-spying-strategy.html", category: "guest-posting" }
-
+{ title: "Competitor Backlink Spying Strategy", link: "/competitor-backlink-spying-strategy.html", category: "guest-posting" },
+{ title: "How to follow up guest post pitch without spam", link: "/how-to-follow-up-guest-post-pitch-without-spam.html", category: "guest-posting" }
 
 ];
 
