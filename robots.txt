@@ -1,9 +1,38 @@
-
-
-User-agent: *
+ User-agent: *
 Allow: /
 Disallow: /cgi-bin/
 
+# OpenAI
+User-agent: GPTBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Meta
+User-agent: FacebookBot
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://gpost.store/sitemap.xml
 Sitemap: https://alwaqassharif.github.io/tl2/sitemap.xml
-
