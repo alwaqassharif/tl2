@@ -30,8 +30,8 @@ const POSTS_DATA = [
 { title: "Broken Link Building Strategy", link: "/broken-link-building-strategy.html", category: "guest-posting" },
 { title: "How to Sell Guest Posting Services on Fiverr", link: "/how-to-sell-guest-posting-services-on-fiverr.html", category: "guest-posting" },
 { title: "Competitor Backlink Spying Strategy", link: "/competitor-backlink-spying-strategy.html", category: "guest-posting" },
-{ title: "How to follow up guest post pitch without spam", link: "/how-to-follow-up-guest-post-pitch-without-spam.html", category: "guest-posting" }
+{ title: "How to follow up guest post pitch without spam", link: "/how-to-follow-up-guest-post-pitch-without-spam.html", category: "guest-posting" },
+{ title: "Guest post acceptance rate improvement techniques", link: "/guest-post-acceptance-rate-improvement-techniques.html", category: "guest-posting" }
 
 ];
-
 
