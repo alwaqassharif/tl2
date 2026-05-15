@@ -32,7 +32,8 @@ const POSTS_DATA = [
 { title: "Competitor Backlink Spying Strategy", link: "/competitor-backlink-spying-strategy.html", category: "guest-posting" },
 { title: "How to follow up guest post pitch without spam", link: "/how-to-follow-up-guest-post-pitch-without-spam.html", category: "guest-posting" },
 { title: "Guest post acceptance rate improvement techniques", link: "/guest-post-acceptance-rate-improvement-techniques.html", category: "guest-posting" },
-{ title: "Common guest posting outreach mistakes for beginners", link: "/common-guest-posting-outreach-mistakes-for-beginners.html", category: "guest-posting" }
+{ title: "Common guest posting outreach mistakes for beginners", link: "/common-guest-posting-outreach-mistakes-for-beginners.html", category: "guest-posting" },
+{ title: "How Many Backlinks Per Guest Post Is Safe?", link: "/how-many-backlinks-per-guest-post-is-safe.html", category: "guest-posting" }
 
 ];
 	
