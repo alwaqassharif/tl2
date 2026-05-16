@@ -35,6 +35,7 @@ const POSTS_DATA = [
 { title: "Common guest posting outreach mistakes for beginners", link: "/common-guest-posting-outreach-mistakes-for-beginners.html", category: "guest-posting" },
 { title: "How Many Backlinks Per Guest Post Is Safe?", link: "/how-many-backlinks-per-guest-post-is-safe.html", category: "guest-posting" },
 { title: "Guest post topic research method step by step", link: "/guest-post-topic-research-method-step-by-step.html", category: "guest-posting" }
+{ title: "Guest post link decay", link: "/guest-post-link-decay.html", category: "guest-posting" }
 
 ];
 	
