@@ -423,8 +423,7 @@ let blogs = [
     link: "./how-to-qualify-websites-for-guest-posting.html"
 }
 ];
-how-to-qualify-websites-for-guest-posting.html
-// SAVE / LOAD LAST UPDATED
+ // SAVE / LOAD LAST UPDATED
 blogs.forEach(blog => {
   let saved = localStorage.getItem(blog.id);
   saved = saved ? JSON.parse(saved) : null;
