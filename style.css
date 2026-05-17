@@ -4,6 +4,12 @@ onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </noscript>
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  src: url("/fa-solid-900.woff2") format("woff2");
+  font-display: swap;
+}
 /* WhatsApp Button */
 .float {
   position: fixed;
