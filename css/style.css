@@ -7,6 +7,15 @@
 }
 @font-face {
   font-family: "Font Awesome 5 Free";
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "bootstrap-icons";
+  font-display: swap;
+}
+@font-face {
+  font-family: "Font Awesome 5 Free";
   src: url("/fa-solid-900.woff2") format("woff2");
   font-display: swap;
 }
