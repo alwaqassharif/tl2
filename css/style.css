@@ -5,21 +5,19 @@
     --light: #F7FAFF;
     --dark: #1D1D27;
 }
+
 @font-face {
   font-family: "Font Awesome 5 Free";
+  src: url("/fa-solid-900.woff2") format("woff2");
+  font-weight: 900;
   font-display: swap;
 }
 
 @font-face {
   font-family: "bootstrap-icons";
+  src: url("/bootstrap-icons.woff2") format("woff2");
   font-display: swap;
 }
-/* @font-face {
-  font-family: "Font Awesome 5 Free";
-  src: url("/fa-solid-900.woff2") format("woff2");
-  font-display: swap;
-} */
-
 /*** Spinner ***/
 #spinner {
     opacity: 0;
