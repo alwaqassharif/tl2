@@ -634,17 +634,44 @@ height="359">
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
     <script src="lib/wow/wow.min.js" defer></script>
     <script src="lib/easing/easing.min.js" defer></script>
     <script src="lib/waypoints/waypoints.min.js" defer></script>
     <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
     <script src="lib/isotope/isotope.pkgd.min.js" defer></script>
-    <script src="lib/lightbox/js/lightbox.min.js" defer></script>
+    <script src="lib/lightbox/js/lightbox.min.js" defer></script> -->
 
     <!-- Template Javascript -->
-    <script src="js/main.js?v=1.0.0"></script>
+    <!-- <script src="js/main.js?v=1.0.0"></script> -->
+	<script>
+window.addEventListener('load', function () {
+  const scripts = [
+    "https://code.jquery.com/jquery-3.6.0.min.js",
+    "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+    "lib/wow/wow.min.js",
+    "lib/easing/easing.min.js",
+    "lib/waypoints/waypoints.min.js",
+    "lib/owlcarousel/owl.carousel.min.js",
+    "lib/isotope/isotope.pkgd.min.js",
+    "lib/lightbox/js/lightbox.min.js",
+    "js/main.js?v=1.0.0"
+  ];
+
+  scripts.reduce((promise, src) => {
+    return promise.then(() => {
+      return new Promise((resolve) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.async = true;
+        s.onload = resolve;
+        document.body.appendChild(s);
+      });
+    });
+  }, Promise.resolve());
+});
+</script>
 </body>
 
 </html>
