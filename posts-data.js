@@ -42,7 +42,9 @@ const POSTS_DATA = [
 { title: "Pros and cons of blogging", link: "/pros-and-cons-of-blogging.html", category: "guest-posting" },
 { title: "How to do outreach for guest posting", link: "/how-to-do-outreach-for-guest-posting.html", category: "guest-posting" },
 { title: "How to get clients for guest posting", link: "/how-to-get-clients-for-guest-posting.html", category: "guest-posting" },
-{ title: "How to do guest posting step by step", link: "/how-to-do-guest-posting-step-by-step.html", category: "guest-posting" }
+{ title: "How to do guest posting step by step", link: "/how-to-do-guest-posting-step-by-step.html", category: "guest-posting" },
+{ title: "How many guest posts per month is ideal", link: "/how-many-guest-posts-per-month-is-ideal.html", category: "guest-posting" }
 
  ];
 	
+ 
