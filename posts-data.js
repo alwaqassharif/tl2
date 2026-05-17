@@ -41,7 +41,8 @@ const POSTS_DATA = [
 { title: "Guest post pricing per domain authority explained", link: "/guest-post-pricing-per-domain-authority-explained.html", category: "guest-posting" },
 { title: "Pros and cons of blogging", link: "/pros-and-cons-of-blogging.html", category: "guest-posting" },
 { title: "How to do outreach for guest posting", link: "/how-to-do-outreach-for-guest-posting.html", category: "guest-posting" },
-{ title: "How to get clients for guest posting", link: "/how-to-get-clients-for-guest-posting.html", category: "guest-posting" }
+{ title: "How to get clients for guest posting", link: "/how-to-get-clients-for-guest-posting.html", category: "guest-posting" },
+{ title: "How to do guest posting step by step", link: "/how-to-do-guest-posting-step-by-step.html", category: "guest-posting" }
 
  ];
 	
