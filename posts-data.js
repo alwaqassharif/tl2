@@ -44,7 +44,8 @@ const POSTS_DATA = [
 { title: "How to get clients for guest posting", link: "/how-to-get-clients-for-guest-posting.html", category: "guest-posting" },
 { title: "How to do guest posting step by step", link: "/how-to-do-guest-posting-step-by-step.html", category: "guest-posting" },
 { title: "How many guest posts per month is ideal", link: "/how-many-guest-posts-per-month-is-ideal.html", category: "guest-posting" },
-{ title: "How to Create Backlinks Step by Step Free", link: "/how-to-create-backlinks-step-by-step-free.html", category: "guest-posting" }
+{ title: "How to Create Backlinks Step by Step Free", link: "/how-to-create-backlinks-step-by-step-free.html", category: "guest-posting" },
+{ title: "SEO backlink strategies for beginners", link: "/seo-backlink-strategies-for-beginners.html", category: "guest-posting" }
 
  ];
  
