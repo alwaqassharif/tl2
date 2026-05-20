@@ -47,7 +47,7 @@ const POSTS_DATA = [
 { title: "How to Create Backlinks Step by Step Free", link: "/how-to-create-backlinks-step-by-step-free.html", category: "guest-posting" },
 { title: "SEO backlink strategies for beginners", link: "/seo-backlink-strategies-for-beginners.html", category: "guest-posting" },
 { title: "Free guest posting sites without registration", link: "/free-guest-posting-sites-without-registration.html", category: "guest-posting" },
-{ title: "Difference between blogger outreach and guest posting", link: "/what-is-the-difference-between-blogger-outreach-and-guest-posting.html", category: "guest-posting" }
+{ title: "Difference between blogger outreach and guest posting", link: "/what-is-the-difference-between-blogger-outreach-and-guest-posting.html", category: "guest-posting" },
+{ title: "How to get backlinks through guest posting step by step", link: "/how-to-get-backlinks-through-guest-posting-step-by-step.html", category: "guest-posting" }
 
  ];
- 
