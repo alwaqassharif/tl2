@@ -49,6 +49,7 @@ const POSTS_DATA = [
 { title: "Free guest posting sites without registration", link: "/free-guest-posting-sites-without-registration.html", category: "guest-posting" },
 { title: "Difference between blogger outreach and guest posting", link: "/what-is-the-difference-between-blogger-outreach-and-guest-posting.html", category: "guest-posting" },
 { title: "How to get backlinks through guest posting step by step", link: "/how-to-get-backlinks-through-guest-posting-step-by-step.html", category: "guest-posting" },
-{ title: "Difference between editorial links and guest posts", link: "/difference-between-editorial-links-and-guest-posts.html", category: "guest-posting" }
+{ title: "Difference between editorial links and guest posts", link: "/difference-between-editorial-links-and-guest-posts.html", category: "guest-posting" },
+{ title: "Does Google count guest post backlinks", link: "/does-google-count-guest-post-backlinks.html", category: "guest-posting" }
 
  ];
