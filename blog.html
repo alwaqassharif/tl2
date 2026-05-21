@@ -512,9 +512,15 @@ let blogs = [
     image: "img/does-google-count-guest-post-backlinks.webp",
     link: "./does-google-count-guest-post-backlinks.html"
 } 
+	,{
+    id: "blog51",
+    title: "How to find niche blogs for guest posting",
+    category: "guest posting",
+    image: "img/how-to-find-niche-blogs-for-guest-posting.webp",
+    link: "./how-to-find-niche-blogs-for-guest-postings.html"
+} 
 ];
-  
- // SAVE / LOAD LAST UPDATED
+  // SAVE / LOAD LAST UPDATED
 blogs.forEach(blog => {
   let saved = localStorage.getItem(blog.id);
   saved = saved ? JSON.parse(saved) : null;
