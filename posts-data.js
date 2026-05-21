@@ -55,6 +55,7 @@ const POSTS_DATA = [
 { title: "How to avoid spam in guest posting", link: "/how-to-avoid-spam-in-guest-posting.html", category: "guest-posting" },
 { title: "How link building affects domain authority", link: "/how-link-building-affects-domain-authority.html", category: "guest-posting" },
 { title: "Why guest post pitches get rejected", link: "/why-guest-post-pitches-get-rejected.html", category: "guest-posting" },
- { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" }
+ { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
+ { title: "How to fix slow backlink growth", link: "/how-to-fix-slow-backlink-growth.html", category: "guest-posting" }
 
  ];
