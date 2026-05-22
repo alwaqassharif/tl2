@@ -58,7 +58,7 @@ const POSTS_DATA = [
  { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
  { title: "How to fix slow backlink growth", link: "/how-to-fix-slow-backlink-growth.html", category: "guest-posting" },
  { title: "Guest Posting Mistakes That Hurt SEO Rankings", link: "/guest-posting-mistakes-that-hurt-seo-rankings.html", category: "guest-posting" },
- { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
+ { title: "How to improve blogger outreach acceptance rate", link: "/how-to-improve-blogger-outreach-acceptance-rate.html", category: "guest-posting" },
  { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
  { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
  { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
