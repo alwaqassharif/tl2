@@ -65,6 +65,7 @@ const POSTS_DATA = [
  { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
  { title: "Wholesale guest posting service for agencies", link: "/wholesale-guest-posting-service-for-agencies.html", category: "guest-posting" },
  { title: "Link insertion service provider for agencies", link: "/link-insertion-service-provider-for-agencies.html", category: "guest-posting" },
- { title: "LWhite Label Link Building vs Manual Blogger Outreach", link: "/white-label-link-building-vs-manual-blogger-outreach.html", category: "guest-posting" }
+ { title: "White Label Link Building vs Manual Blogger Outreach", link: "/white-label-link-building-vs-manual-blogger-outreach.html", category: "guest-posting" },
+ { title: "Guest Blogging Strategy for Small Business Owners USA", link: "/guest-blogging-strategy-for-small-business-owners-usa.html", category: "guest-posting" }
 
  ];
