@@ -62,6 +62,7 @@ const POSTS_DATA = [
  { title: "How to fix toxic backlinks from guest posting", link: "/how-to-fix-toxic-backlinks-from-guest-posting.html", category: "guest-posting" },
  { title: "Real estate website SEO through guest blogging", link: "/real-estate-website-seo-through-guest-blogging.html", category: "guest-posting" },
  { title: "Why Nobody Responds to My Cold Outreach Emails", link: "/why-nobody-responds-to-my-cold-outreach-emails.html", category: "guest-posting" },
- { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" }
+ { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
+ { title: "Wholesale guest posting service for agencies", link: "/wholesale-guest-posting-service-for-agencies.html", category: "guest-posting" }
 
  ];
