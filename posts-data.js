@@ -63,6 +63,7 @@ const POSTS_DATA = [
  { title: "Real estate website SEO through guest blogging", link: "/real-estate-website-seo-through-guest-blogging.html", category: "guest-posting" },
  { title: "Why Nobody Responds to My Cold Outreach Emails", link: "/why-nobody-responds-to-my-cold-outreach-emails.html", category: "guest-posting" },
  { title: "Why guest post backlinks are not indexed", link: "/why-guest-post-backlinks-are-not-indexed.html", category: "guest-posting" },
- { title: "Wholesale guest posting service for agencies", link: "/wholesale-guest-posting-service-for-agencies.html", category: "guest-posting" }
+ { title: "Wholesale guest posting service for agencies", link: "/wholesale-guest-posting-service-for-agencies.html", category: "guest-posting" },
+ { title: "Link insertion service provider for agencies", link: "/link-insertion-service-provider-for-agencies.html", category: "guest-posting" }
 
  ];
