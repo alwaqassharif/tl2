@@ -1,4 +1,4 @@
-  
+   
  
  <!DOCTYPE html>
 <html lang="en">
@@ -369,6 +369,30 @@ Contact Us
     <li><strong>Semrush Backlink Audit Tool:</strong> This tool's Toxicity Score feature is specifically built for this use case. It flags links based on 45+ toxic markers and integrates directly with Google's disavow file submission.</li>
     <li><strong>Majestic SEO:</strong> Use the Trust Flow vs. Citation Flow ratio. Legitimate editorial sites score well on both; PBNs often have high Citation Flow but low Trust Flow — a classic manipulation pattern.</li>
   </ul>
+<!-- PLACEMENT: "How to Find Toxic Backlinks" section — After bullet list (Ahrefs/Semrush/Majestic), before numbered steps -->
+<figure style="margin: 32px 0; text-align: center;">
+  <img
+    src="https://gpost.store/img/semrush-referring-domains-toxic-audit.webp"
+    alt="semrush Site Explorer showing referring domains sorted by AS to identify low-quality toxic guest post backlinks"
+    width="900"
+    loading="lazy"
+    style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+  />
+  <figcaption style="margin-top: 10px; font-size: 0.875rem; color: #555; font-style: italic;"><center>Semrush Site Explorer — Referring Domains view sorted by DR. Low-DR domains with high linking pages and irrelevant niches are primary audit targets. Filter by "Dofollow" and cross-reference with your known guest post outreach history.</center></figcaption>
+</figure>
+
+
+
+<figure style="margin: 32px 0; text-align: center;">
+  <img
+    src="https://gpost.store/img/semrush-Overall-toxicity-score.webp"
+    alt="Semrush Overall Toxicity Score for low-quality toxic  backlinks"
+    width="900"
+    loading="lazy"
+    style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+  />
+  <figcaption style="margin-top: 10px; font-size: 0.875rem; color: #555; font-style: italic;"><center>Semrush Overall Toxicity Score for low-quality toxic  backlinks</center></figcaption>
+</figure>
 
   <p>Use Google search operators to manually audit suspect publishers. Search <code>site:suspectdomain.com</code> to check content depth and volume. Search <code>"[your brand]" site:suspectdomain.com</code> to see how many times they've linked to you. If you see dozens of links from a single domain you don't recognize, treat it as a high-priority audit target.</p>
 
@@ -510,6 +534,17 @@ Contact Us
     <li>
       <h3>Build Your Disavow File</h3>
       <p>Google's disavow file is a plain text (.txt) document that tells Googlebot to ignore specific links when evaluating your site. Format it correctly: use <code>domain:example.com</code> to disavow all links from a root domain (preferred over disavowing individual URLs for widespread PBN sites), and use full URLs only for specific pages on otherwise legitimate sites. Add comment lines using # to document why each domain is disavowed — this is not required, but it helps if your team needs to revisit the file or if Google's team reviews your reconsideration request. This step is the technical core of the <strong>how to disavow bad guest post links in Google Search Console</strong> process.</p>
+	  <!-- PLACEMENT: End of Step 4 "Build Your Disavow File" — after last paragraph -->
+<figure style="margin: 28px 0; text-align: center;">
+  <img
+    src="https://gpost.store/img/disavow-file-example-real.webp"
+    alt="Real Google disavow file example showing domain: syntax and comment lines for toxic guest post backlinks"
+    width="820"
+    loading="lazy"
+    style="max-width: 100%; border: 1px solid #e0e0e0; border-radius: 8px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);"
+  />
+  <figcaption style="margin-top: 10px; font-size: 0.875rem; color: #555; font-style: italic;"><center>Real disavow.txt file structure — use <code>domain:</code> syntax for root-level disavowal and <code>#</code> comment lines to document the reason for each entry. Google's review team reads these comments during manual action reconsiderations.</center></figcaption>
+</figure>
     </li>
     <li>
       <h3>Submit the Disavow File in Google Search Console</h3>
