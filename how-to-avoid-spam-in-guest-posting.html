@@ -531,7 +531,166 @@ Contact Us
                 <h4 class="text-white mb-4">
                     <strong>Get In Touch</strong>
                 </h4>
-                <p><i class="fa fa-envelope me-3"></i>info@gpost.store</p>
+                <p><i class="fa fa-envelope me-3"></i>info@gpost.store <style>
+.social-icons{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-top:25px;
+}
+
+.social-icons a{
+    position:relative;
+    width:58px;
+    height:58px;
+    border-radius:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:24px;
+    color:#fff;
+    overflow:hidden;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25),
+        inset 0 1px 1px rgba(255,255,255,.15);
+    transition:all .45s cubic-bezier(.175,.885,.32,1.275);
+}
+
+/* Shiny Effect */
+.social-icons a::before{
+    content:'';
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:250%;
+    height:250%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+    transform:rotate(25deg);
+    transition:.7s;
+}
+
+.social-icons a:hover::before{
+    top:100%;
+    left:100%;
+}
+
+.social-icons a:hover{
+    transform:translateY(-8px) scale(1.12) rotate(-4deg);
+    color:#fff;
+}
+
+/* LinkedIn */
+.social-icons .linkedin:hover{
+    background:#0077B5;
+    box-shadow:
+        0 0 20px rgba(0,119,181,.6),
+        0 0 40px rgba(0,119,181,.4),
+        0 15px 35px rgba(0,119,181,.35);
+}
+
+/* Facebook */
+.social-icons .facebook:hover{
+    background:#1877F2;
+    box-shadow:
+        0 0 20px rgba(24,119,242,.6),
+        0 0 40px rgba(24,119,242,.4),
+        0 15px 35px rgba(24,119,242,.35);
+}
+
+/* Instagram */
+.social-icons .instagram:hover{
+    background:linear-gradient(
+        45deg,
+        #f09433,
+        #e6683c,
+        #dc2743,
+        #cc2366,
+        #bc1888
+    );
+    box-shadow:
+        0 0 20px rgba(225,48,108,.6),
+        0 0 40px rgba(225,48,108,.4),
+        0 15px 35px rgba(225,48,108,.35);
+}
+
+/* X */
+.social-icons .x:hover{
+    background:#000;
+    box-shadow:
+        0 0 20px rgba(255,255,255,.35),
+        0 0 40px rgba(255,255,255,.20),
+        0 15px 35px rgba(0,0,0,.45);
+}
+
+/* SVG Icon Size */
+.social-icons .x svg{
+    width:22px;
+    height:22px;
+    fill:currentColor;
+}
+
+/* Floating Animation */
+.social-icons a:nth-child(1){
+    animation:float 3s ease-in-out infinite;
+}
+
+.social-icons a:nth-child(2){
+    animation:float 3s ease-in-out infinite .4s;
+}
+
+.social-icons a:nth-child(3){
+    animation:float 3s ease-in-out infinite .8s;
+}
+
+.social-icons a:nth-child(4){
+    animation:float 3s ease-in-out infinite 1.2s;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-6px);
+    }
+}
+</style>
+
+<div class="social-icons">
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/gpost-store/" target="_blank" class="linkedin" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/Gpost.store" target="_blank" class="facebook" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/gpost.store/" target="_blank" class="instagram" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- X -->
+    <a href="https://x.com/gpoststore" target="_blank" class="x" aria-label="X">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             viewBox="0 0 24 24">
+            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.64 7.584H.474l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932z"/>
+        </svg>
+    </a>
+
+</div></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -562,7 +721,7 @@ Contact Us
                 </p>
                 <div class="position-relative w-100 mt-3">
                     <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
+                    <button type="submit" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2" aria-label="Subscribe to Newsletter" title="Subscribe to Newsletter">
                         <i class="fa fa-paper-plane text-primary fs-4"></i>
                     </button>
                 </div>
@@ -575,7 +734,7 @@ Contact Us
         <div class="copyright">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                   © 2026 <a class="border-bottom" href="https://gpost.store">GPost.store</a>. All Rights Reserved. Designed & Developed by <a class="border-bottom" href="https://gpost.store">GPost</a>
+                 © 2026 <a class="border-bottom" href="https://gpost.store">GPost.store</a>. All Rights Reserved. Designed & Developed by <a class="border-bottom" href="https://gpost.store">GPost</a>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <div class="footer-menu">
@@ -590,7 +749,6 @@ Contact Us
     </div>
 </div>
 <!-- Footer End -->
-
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
