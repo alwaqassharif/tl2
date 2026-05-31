@@ -66,6 +66,7 @@ const POSTS_DATA = [
  { title: "Wholesale guest posting service for agencies", link: "/wholesale-guest-posting-service-for-agencies.html", category: "guest-posting" },
  { title: "Link insertion service provider for agencies", link: "/link-insertion-service-provider-for-agencies.html", category: "guest-posting" },
  { title: "White Label Link Building vs Manual Blogger Outreach", link: "/white-label-link-building-vs-manual-blogger-outreach.html", category: "guest-posting" },
- { title: "Guest Blogging Strategy for Small Business Owners USA", link: "/guest-blogging-strategy-for-small-business-owners-usa.html", category: "guest-posting" }
+ { title: "Guest Blogging Strategy for Small Business Owners USA", link: "/guest-blogging-strategy-for-small-business-owners-usa.html", category: "guest-posting" },
+ { title: "What Is Guest Posting in Ecommerce Marketing: Complete Guide 2026", link: "/what-is-guest-posting-in-ecommerce-marketing.html", category: "guest-posting" }
 
  ];
