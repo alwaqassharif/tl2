@@ -70,6 +70,7 @@ const POSTS_DATA = [
  { title: "What Is Guest Posting in Ecommerce Marketing: Complete Guide 2026", link: "/what-is-guest-posting-in-ecommerce-marketing.html", category: "guest-posting" },
  { title: "Affordable Guest Posting Agency USA", link: "/affordable-guest-posting-agency-usa.html", category: "guest-posting" },
  { title: "Guest Post Pricing Per Domain Authority", link: "/guest-post-pricing-per-domain-authority-explained.html", category: "guest-posting" },
- { title: "How to Write a Guest Post Pitch Email That Gets Replies", link: "/how-to-write-guest-post-pitch-email-that-gets-replies.html", category: "guest-posting" }
+ { title: "How to Write a Guest Post Pitch Email That Gets Replies", link: "/how-to-write-guest-post-pitch-email-that-gets-replies.html", category: "guest-posting" },
+ { title: "Guest Post Pitch Templates That Editors Actually Approve in 2026", link: "/guest-post-pitch-templates-that-editors-actually-approve.html", category: "guest-posting" }
 
  ];
