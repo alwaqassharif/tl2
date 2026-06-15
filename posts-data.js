@@ -72,6 +72,7 @@ const POSTS_DATA = [
  { title: "Guest Post Pricing Per Domain Authority", link: "/guest-post-pricing-per-domain-authority-explained.html", category: "guest-posting" },
  { title: "How to Write a Guest Post Pitch Email That Gets Replies", link: "/how-to-write-guest-post-pitch-email-that-gets-replies.html", category: "guest-posting" },
  { title: "Guest Post Pitch Templates That Editors Actually Approve in 2026", link: "/guest-post-pitch-templates-that-editors-actually-approve.html", category: "guest-posting" },
- { title: "How to Write a Guest Post Introduction That Hooks Editors", link: "/how-to-write-a-guest-post-introduction-that-hooks-editors.html", category: "guest-posting" }
+ { title: "How to Write a Guest Post Introduction That Hooks Editors", link: "/how-to-write-a-guest-post-introduction-that-hooks-editors.html", category: "guest-posting" },
+ { title: "How to Add Statistics and Data to Guest Posts Without Plagiarism", link: "/how-to-add-statistics-and-data-to-guest-posts-without-plagiarism.html", category: "guest-posting" }
 
  ];
